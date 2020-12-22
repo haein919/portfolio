@@ -1,2 +1,3 @@
 /* other_contactBox.css */
 
+#contactBox { width:100%; height:auto; min-height:500px; margin:auto; background-color:#ccc; }

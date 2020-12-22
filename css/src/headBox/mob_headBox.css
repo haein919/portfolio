@@ -1,1 +1,33 @@
 /* mob_headBox.css */
+
+@media screen and (max-width:599px) {
+  #headBox { position:absolute; top:10px; left:0; z-index:2000; 
+    width:100%; height:100px; margin:auto; }
+
+    .head_outer { width:100%; height:100%; margin:auto;
+      padding:20px; box-sizing:border-box; 
+      background-color:rgba(255,255,255,0.8);
+    }
+    h1 { display:block; width:30%; height:100%; float:left; }
+    h1 a { display: block; width:100%; height:100%; line-height:50px;
+      text-transform:capitalize; }
+
+    .gnb { width:100%; height:100%; margin:auto; }
+    
+    .btn_area { display:block; float:right; width:40px; height:100%;  }
+    .btn_area button { position:relative; width:100%; height:100%; font-size:3rem; line-height:3rem; }
+
+    .btn_area button i { position:absolute; top:30px; right:0; 
+      display:block; width:100%; height:4px; 
+      background-color:#333; border-radius:5px; opacity:1; transition:all 300ms ease; }
+    
+    .line_02 { transform:translateY(-15px); }
+    .line_03 { transform:translateY(15px); }
+  
+    .btn_area.on .line_01 { opacity:0; }
+    .btn_area.on .line_02 { transform:translateY(0) scaleX(1.2) rotate(50deg); }
+    .btn_area.on .line_03 { transform:translateY(0) scaleX(1.2) rotate(-50deg); }
+    
+    .menu_outer { display:none;  }
+
+}

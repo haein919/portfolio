@@ -1,1 +1,22 @@
 /* other_aboutBox.css */
+
+#aboutBox { width:100%; height:auto; min-height:500px; margin:auto;
+  background-image:url('../../../img/background.jpg');
+  background-repeat:no-repeat;
+  background-position:0 0;
+  background-size:100% auto; } /* #020611 */
+
+.about_outer { width:100%; height:auto; min-height:500px; background-color:rgba(2,6,17,0.6); }
+
+  .title_area { width:100%; height:auto; margin-bottom:100px; }
+    .title_area i { display: block; }
+    .line { width:1.5px; height:70px; margin:auto; background-color:#fff; }
+    .circle { width:10px; height:10px; border-radius:100%; margin:auto;
+      margin-bottom:40px; background-color:#fff; }
+  .title_area h3 { width:auto; height:40px; margin:auto; 
+    text-align:center; text-transform:uppercase; color:#fff; }
+
+  .about_context_area { width:90%; height:auto; min-height:200px; margin:auto; background-color:#fff; }
+  .about_context_text { float:left; width:60%; height:auto; min-height:200px; }
+  .about_context_text span { width:auto; height:auto; }
+  .about_context_img { float:right; width:40%; height:auto; min-height:200px; background-color:#fea; }
