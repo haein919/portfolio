@@ -4,61 +4,70 @@
  // jQuery start
   var win = $(window) ;
   var winH = win.outerHeight();
+  
+  var canvas = document.querySelector('.paper');
+  var ctx = canvas.getContext('2d');
+  
+  var baseColor = "#07a";
+  ctx.lineWidth = 20;
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = baseColor;
+  ctx.font = "40px Noto Sans KR";
+  ctx.textAlign = 'center';
+  ctx.fillStyle = baseColor;
 
-  var homeBox = $('#homeBox');
-  var h1 = homeBox.find('h1');
-  var frontImg = homeBox.find('.front_img');
-  var backImg = homeBox.find('.back_img');
-
-  var setN = 1.5;
-
-  // 브라우저 스크롤시 수행
-  win.on('scroll', function(){
-    var winSt = $(this).scrollTop();
-    var per = winSt / winH;
-    var scaleR = 1+per;  // 100% 기준에서 더하기 처리를 해줌 scale을 1부터 커지게 하기 위해 1을 더함
-    var opacityR, airper, logoPer; 
-
-    // 4. logo 사라지게 만들기
-    // 5. logo 사라지는 동안 앞에 투명막 생기게 하기 (logo가 안눌리게 처리하는 것)
-    var logoR = 0.5;
-    if( per >= logoR){
-      logoPer = (1+logoR) - per;
-      console.log( logoR + per );
-      h1.css({'opacity':logoPer, 'transform':'scale('+ (logoR + per) + ')' });
-
-      homeBox.addClass('default');
-    }else{
-      homeBox.removeClass('default');
-    }
-    
-    // 1. frontImg가 점점 커지게( transform:scale() );
-    // 2. 점점 사라지게
-    opacityR = setN + 1 - per;
-
-    if(scaleR <=setN){ // 일정량 부분에서 크기 고정됨 // setN(=1.5)보다 작은 수치까지만 처리됨
-      // console.log('scale:', 1 + per); // 1을 100%라고 해줌
-      frontImg.css({'transform':'scale('+ scaleR +')'})
-    }else if(scaleR >= setN +1){ // 1.5부터 2.5까지는 고정된 크기로 보여준 다음에 그 이후 부터 투명도 조절
-      // console.log('opacity:', opacityR +1);
-      frontImg.css({'opacity':opacityR});
-    }
-
-    // 6. frontImg의 투명도가 0이 되면, headBox를 사라지게 만들기
-    if(opacityR < 0){
-      console.log( '사라진위치:', win.scrollTop() );
-      homeBox.hide();
-    }else{
-      homeBox.show();
-    }
-
-  // 3. 비행기 나타나면서 올라가기
-    if(scaleR > setN){
-      airper = (scaleR - setN)*100;
-      // console.log(airper);
-      backImg.css({'transform':'scale(' + scaleR + ')'})
-    }
-  });
+    var MyGraph = function(x, y, p, s){		
+      var posX = x * 250 ;
+      var posY = y * 250 -200;
+      var percent = p ; 
+      var skill = s || 'program';
+      // var 
+      
+      var animationCircle;
+      var i = 0;
+      var CircleGraph = function(){
+        animationCircle = function(percent){
+  
+          var lineWidth = 20;
+          var r    = 100;
+          var rect = (r + lineWidth) * 2 + 10;
+          ctx.lineWidth = lineWidth;
+        
+        var myP = function(percent){
+          // percent  :  값 / 기준 * 100 -> 값 / 100 * 기준
+          var p = (percent / 100 * 2) + 1.5;
+          return Math.PI * p;
+        };
+        // 240은 (반지름 100과, 선두께 15) * 2 계산값보다 10큰 영역으로 설정
+        ctx.clearRect(posX - (rect/2), posY - (rect/2), rect, rect);
+  
+        ctx.beginPath();
+        ctx.arc(posX, posY, r , Math.PI * 1.5 , myP(percent), false);
+        ctx.stroke();		
+        ctx.textAlign = 'center';
+        ctx.fillStyle = baseColor;
+        ctx.font = "normal 35px Noto Sans KR";
+        ctx.fillText(skill, posX, posY-15);
+        ctx.font = "bold 40px Noto Sans KR";
+        ctx.fillText(percent+ '%', posX, posY + 40);
+      };
+  
+      i += 1;
+      animationCircle( i );
+      (i < percent) ? requestAnimationFrame(CircleGraph): 
+                      cancelAnimationFrame(CircleGraph);
+    };
+    CircleGraph();
+  }// MyGraph(x좌표, y좌표, percent, 스킬명);
+  
+  
+  MyGraph(1,1, 70, 'HTML');
+  MyGraph(2,1, 70, 'CSS');
+  MyGraph(2,2, 40, 'jQuery');
+  MyGraph(1,3, 70, 'Photoshop');
+  MyGraph(2,3, 70, 'Illustrator');
+  MyGraph(3,3, 40, 'Indesign');
+  
 
  // jQuery end
 })(jQuery);

@@ -1,2 +1,6 @@
 /* other_projectBox.css */
 
+#projectBox { width:100%; height:auto; min-height:500px; margin:auto;
+  /* background-image:url('../../../img/background.jpg'); */ } /* #020611 */
+
+.project_outer { width:100%; height:auto; min-height:500px; background-color:rgba(2,6,17,0.6); }
