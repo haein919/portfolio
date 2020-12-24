@@ -1,9 +1,8 @@
 /* other_aboutBox.css */
 
-#aboutBox { width:100%; height:auto; min-height:500px; margin:auto;
-  /* background-image:url('../../../img/background.jpg'); */ } /* #020611 */
+#aboutBox { width:100%; height:auto; min-height:500px; margin:auto; margin-bottom:100px; } /* #020611 */
 
-.about_outer { position:relative; width:100%; height:auto; min-height:500px; background-color:rgba(2,6,17,0.8); }
+.about_outer { position:relative; width:100%; height:auto; min-height:500px;  }
 
   .title_area { width:100%; height:auto; margin-bottom:100px; }
     .title_area i { display: block; }
@@ -21,18 +20,10 @@
 	50% { box-shadow: 1px 1px #541d87, 0 0 16px 8px #8f91ff, inset 2px 2px #dfd3ff; } }
 
   .title_area h3 { width:auto; height:40px; margin:auto; 
-    text-align:center; text-transform:uppercase; color:#fff; }
+    text-align:center; text-transform:uppercase; color:#fff;
+    font-size:2rem; font-weight:400; }
 
-  /* @keyframes neon2 {
-    from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 
-      0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 
-      0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF; }
-    to { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 
-      0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF,
-      0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF; }
-  } */
-
-  .about_context_area { width:60%; height:auto; min-height:200px; margin:auto; margin-bottom:100px; }
+  .about_context_area { width:60%; height:auto; min-height:200px; margin:auto; margin-bottom:150px; }
   .about_context_text { float:left; width:60%; height:auto; min-height:200px;
     padding-top:10px; box-sizing: border-box; text-align:right; }
   .about_context_text span { width:auto; height:auto; color:#fff; font-weight:100; }
@@ -42,10 +33,13 @@
     background-position:50% 50%;
     background-size:contain; }
 
-.skill_area { width:100%; height:100%;  }
+.skill_area { width:100%; height:100%; margin-bottom:50px; }
 .skill_area > h3 { text-align:center; color:#fff; text-transform:uppercase;
-  margin-bottom:50px; }
-  .paper{ display:block; margin:auto; background-color:rgba(255,255,255,0.6); }
+  margin-bottom:50px; font-weight:400; }
+  .paper{ display:block; margin:auto; 
+    width:80%; height:100%; }
 
-.about_btn_area { width:auto; height:auto; }
-.about_btn_area button { width:auto; height:auto; color:#fff; }
+.about_btn_area { width:60px; height:auto; border:1px solid #fff; text-align:center; margin:auto; }
+.about_btn_area button { width:100%; height:auto; color:#fff; line-height:35px; }
+.about_btn_area:hover { background-color:#fff; border:none; }
+.about_btn_area:hover button { color:#2A66C0; line-height:37px; font-weight:bold; }

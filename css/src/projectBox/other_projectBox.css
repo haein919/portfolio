@@ -3,4 +3,49 @@
 #projectBox { width:100%; height:auto; min-height:500px; margin:auto;
   /* background-image:url('../../../img/background.jpg'); */ } /* #020611 */
 
-.project_outer { width:100%; height:auto; min-height:500px; background-color:rgba(2,6,17,0.6); }
+.project_outer { width:100%; height:auto; min-height:500px; }
+
+.project_area { width:100%; height:auto; }
+
+.project_area ul { width:90%; height:auto; margin:2rem auto; }
+.project_area ul:after,
+.project_area ul::after { content:" "; display:block; clear:both; 
+  width:100%; height:0; }
+
+.project_area li { float:left; overflow:hidden;
+  width:400px; height:600px; padding:0.5rem; box-sizing:border-box;
+  border:1px solid #777; margin-right:30px; margin-bottom:50px; background-color:#fff; }
+
+.project_area > ul > li > a { display:block; width:100%; height:50%;
+  overflow:hidden; border-radius:0.3rem; margin-bottom:15%;
+  border:1px solid #777;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  background-size:cover; }
+
+.project_context { position:relative; width:90%; height:40%; margin:auto; }
+.project_context > span { width:100%; height:auto; font-style:italic; font-size:0.9rem;
+  color:#0038A9; font-weight:600; }
+
+.project_area div > dl { width:100%; height:auto; margin-top:10px; }
+.project_area div > dl > dt { width:100%; height:auto; text-transform:uppercase;
+  font-weight:bold; margin-bottom:10px; }
+
+.project_area div > dl > dd { width:100%; height:auto; }
+
+.project_area .pro_btn { position: absolute; bottom:10px; left:0; width:100%; height:30px; }
+
+.project_area .pro_btn> button { float:left; width:49%; height:30px; 
+  color:#fff; font-size:0.9rem; background-color:rgba(0,0,0,0.8); font-family:'Noto Sans Kr';
+  font-weight:600; }
+
+.project_area .pro_btn> button:hover,
+.project_area .pro_btn > a:hover { background-color:#003EBC;
+  color:#fff; font-weight:bold; } 
+
+.project_area .pro_btn > a { display: block;
+  float:right; width:49%; height:30px;
+  border:1px solid #0038A9; 
+  color:#fff; text-align:center; font-weight:600;
+  font-size:0.9rem; line-height:29px;
+  background-color:rgba(0,0,0,0.4);  } 

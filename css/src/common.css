@@ -7,3 +7,5 @@ html,body { width:100%; height:100%; }
   background-repeat:no-repeat;
   background-position:0 0;
   background-size:120% 100%; } /* #020914 */
+  
+  .wrap_outer { background-color:rgba(2,6,17,0.6); }
