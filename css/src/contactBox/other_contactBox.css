@@ -1,3 +1,37 @@
 /* other_contactBox.css */
 
-#contactBox { width:100%; height:auto; min-height:500px; margin:auto; background-color:#ccc; }
+#contactBox { width:100%; height:auto; min-height:25vw; margin:auto; }
+
+.contact_outer { width:100%; height:100%; padding:20px;
+  padding-bottom:50px; box-sizing:border-box; }
+
+.contact_text { width:100; height:30%; }
+.contact_text span { display:block; width:60%; height:60%;
+  margin:auto; text-align:right; color:rgba(255,255,255,0.8); font-size:2.5rem; font-weight:bold; text-transform:capitalize; }
+.contact_text p { width:60%; height:20%; 
+  text-align:right; margin:auto; margin-top:20px;
+  color:#fff; font-size:1.3rem; 
+  font-weight:400; text-transform:capitalize; }
+
+
+.contact_area { width:60%; height:70%; margin:auto; margin-top:100px; }
+.con_title { width:12vw; height:30px; 
+  background-color:rgba(255,255,255,0.3);
+  border-radius:5px; color:#fff; text-align:center;
+  text-transform:uppercase; line-height:30px; }
+
+.con_title::after { content:" "; display:block;
+  width:480%; border-bottom:1px solid #fff; }
+
+.con_content { width:100%; height:50%; margin-top:50px; }
+.con_content dl { width:100%; height:100%; }
+
+.con_content dt { float:left; width:30px; height:30px; 
+  margin-bottom:20px; border:1px solid #fff; border-radius:100%; }
+.con_content dt i { display: block; width:100%; height:100%; 
+  color:#fff; text-align:center; line-height:30px; }
+
+.con_content dd { float:left; width:auto; height:20px;
+  margin-left:20px; color:#fff; }
+.con_content dd a { display:block; width:100%; height:100%;
+  color:#fff; }

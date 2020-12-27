@@ -8,7 +8,7 @@
    var canvas = document.querySelector('.paper');
    var ctx = canvas.getContext('2d');
    
-   var baseColor = "#5072FF";
+   var baseColor = "#274CA7"; //#5072FF
    var fontColor = "#fff"
    ctx.lineWidth = 20;
    ctx.lineCap = 'round';

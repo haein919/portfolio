@@ -17,7 +17,9 @@
     
     projectArea.append('<ul></ul>');
     var projectUl = projectArea.children('ul');
-    var liContent = '<li><a></a><div class="project_context"><span></span><dl><dt></dt><dd></dd></dl><div class="pro_btn"><button type="button">과정보기</button><a>바로가기</a></div></div></li>'
+    var liContent = '<li><a></a><div class="project_context"><span></span><dl><dt></dt><dd></dd></dl>\
+    <div class="pro_btn"><button type="button">과정보기</button><a>바로가기</a></div></div></li>'
+    
     var i = 0;
     var listEl, listImg, linkA;
     for(; i < data.length; i+=1){
@@ -29,7 +31,7 @@
       listEl.find('dt').text(data[i].title);
       listEl.find('dd').text(data[i].text);
       linkA = listEl.find('.pro_btn').find('a');
-      linkA.attr({'href':'#'});
+      linkA.attr({'href':data[i].alink});
     }
     var projectLi = projectUl.children('li');
 
@@ -39,8 +41,19 @@
     var browserSet = function(){
       projectLi.removeAttr('style');
       var winW = win.outerWidth();
-      var liLen = parseInt( winW / (projectLiWidth + projectLiMargin) );
-      console.log(liLen);
+      
+      //li개수값
+      var liLen = (function(){
+        var len;
+        len = parseInt( winW / (projectLiWidth + projectLiMargin) ); 
+        if( len < 2){
+          liLen = len;
+        }else{
+          liLen = 2
+        }
+        return liLen;
+      })();
+      
       var ulWidth = ( (projectLiWidth + projectLiMargin) * liLen) - projectLiMargin; // 마지막 list의 margin-rigth 값을 빼줌
       projectUl.css({'width': ulWidth + 'px' });
       // console.log(liLen, ulWidth);
@@ -55,7 +68,7 @@
       };
     }; // browserSet();
     browserSet();
-  
+    
     win.on('resize', function(){
       browserSet();
     });
