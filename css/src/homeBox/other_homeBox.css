@@ -1,18 +1,19 @@
 /* other_homeBox.css */
 
-#homeBox { /* position:fixed; z-index:1000; top:0; left:0; */
+#homeBox { position:fixed; z-index:1000; top:0; left:0;
   width:100%; height:100vh; min-height:600px;
   background-color:#020914; }
 
-/* #headBox.default::before { content:" "; display: block; 
+#homeBox.default::before { content:" "; display: block; 
   position:absolute; top:0; left:0; z-index:500;
-  width:100%; height:100%; } */
+  width:100%; height:100%; }
 
 .home_outer { width:100%; height:100%; }
 
 .context_area { position:absolute; top:0; left:0; right:0; bottom:0;
   margin:auto; z-index:100; width:500px; height:200px;
-  color:rgba(255,255,255,0.8); font-size:3rem; text-transform:capitalize; }
+  color:rgba(255,255,255,0.8); font-size:3rem; text-transform:capitalize;
+  opacity:0; }
 
 .home_img_area { 
   position:absolute; top:0; left:0; 
@@ -20,11 +21,19 @@
 .home_img_area div { 
   position:absolute; top:0; left:0;
   width:100%; height:100%;
-  background-repeat:no-repeat;
-  background-size:cover; }
+  background-repeat:no-repeat; }
 
+  .mountain_img { z-index:15;
+    background-image:url('../../../img/mountain.png');
+    background-position:50% 117%;
+    background-size:100% auto;}
+  .moon_img { z-index:10; 
+    background-image:url('../../../img/moon.png');
+    background-position:50% 95%;
+    background-size:20% auto; }
   .home_img { z-index:5; 
-    background-image:url('../../../img/moon-2048727_1920.jpg');
-    background-position:50% 0 ; }
+    background-image:url('../../../img/background_black.png');
+    background-position:50% 0 ; 
+    background-size:cover; }
 
 .blank_area { width:100%; height:3500px; background-color:#020914; }
