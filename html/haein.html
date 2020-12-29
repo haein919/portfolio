@@ -34,10 +34,10 @@
             </div> <!-- // btn_area -->
             <div class="menu_outer">
               <ul class="clearfix">
-                <li><a href="#">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#homeBox">home</a></li>
+                <li><a href="#aboutBox">about</a></li>
+                <li><a href="#projectBox">portfolio</a></li>
+                <li><a href="#contactBox">contact</a></li>
               </ul>
             </div> <!-- // menu_outer -->
           </nav> <!-- // nav -->
@@ -58,51 +58,53 @@
         </div> <!-- // home_outer -->
       </section> <!-- // #homeBox -->
 
-      <section id="aboutBox">
-      <h2><span class="hidden_context">about영역</span></h2>
-      <div class="about_outer">
-        <div class="title_area">
-          <i class="line"></i>
-          <i class="circle"></i>
-          <h3 class="about_title">about me</h3>
-        </div> <!-- // title_area -->
-        <div class="about_context_area clearfix">
-          <div class="about_context_text">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Error tempore laudantium, quidem possimus voluptas quam dignissimos. 
-              Amet neque ut iste vel cupiditate, praesentium corporis rem a illum officiis tempore dicta.</span>
+      <div id="aboutWrap">
+        <section id="aboutBox">
+        <h2><span class="hidden_context">about영역</span></h2>
+        <div class="about_outer">
+          <div class="title_area">
+            <i class="line"></i>
+            <i class="circle"></i>
+            <h3 class="about_title">about me</h3>
+          </div> <!-- // title_area -->
+          <div class="about_context_area clearfix">
+            <div class="about_context_text">
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Error tempore laudantium, quidem possimus voluptas quam dignissimos. 
+                Amet neque ut iste vel cupiditate, praesentium corporis rem a illum officiis tempore dicta.</span>
+            </div>
+            <div class="about_context_img"></div>
+          </div> <!-- // about_context_area -->
+          <div class="skill_area">
+            <h3>skills</h3>
+            <canvas class="paper" width="1400px" height="400px">
+              <p>브라우저 미지원입니다.</p>
+            </canvas>
+            <!-- <ul class="clearfix">
+              <li>
+                <a>html_img</a>
+                <span>html</span>
+              </li>
+              <li>
+                <a>css_img</a>
+                <span>css</span>
+              </li>
+              <li>
+                <a>js_img</a>
+                <span>js</span>
+              </li>
+              <li>
+                <a>graphic_img</a>
+                <span>graphic</span>
+              </li>
+            </ul> -->
+          </div> <!-- // skill_area -->
+          <div class="about_btn_area">
+            <button class="about_btn" type="button">more</button>
           </div>
-          <div class="about_context_img"></div>
-        </div> <!-- // about_context_area -->
-        <div class="skill_area">
-          <h3>skills</h3>
-          <canvas class="paper" width="1400px" height="400px">
-            <p>브라우저 미지원입니다.</p>
-          </canvas>
-          <!-- <ul class="clearfix">
-            <li>
-              <a>html_img</a>
-              <span>html</span>
-            </li>
-            <li>
-              <a>css_img</a>
-              <span>css</span>
-            </li>
-            <li>
-              <a>js_img</a>
-              <span>js</span>
-            </li>
-            <li>
-              <a>graphic_img</a>
-              <span>graphic</span>
-            </li>
-          </ul> -->
-        </div> <!-- // skill_area -->
-        <div class="about_btn_area">
-          <button class="about_btn" type="button">more</button>
-        </div>
-      </div> <!-- // about_outer -->
-      </section> <!-- // #aboutBox -->
+        </div> <!-- // about_outer -->
+        </section> <!-- // #aboutBox -->
+      </div>
 
       <section id="projectBox">
       <h2><span class="hidden_context">project영역</span></h2>
@@ -112,8 +114,29 @@
           <i class="circle"></i>
           <h3>project</h3>
         </div>
+        
         <div class="project_area">
         </div> <!-- // project_area -->
+
+        <div class="process_area">
+          <div class="process_outer">
+            <div class="close">
+              <button type="button"><i class="fas fa-times"><span class="hidden_context">닫기</span></i></button>
+            </div>
+            <div class="np_btn">
+              <button type="button" class="next"><i class="fas fa-chevron-right"><span class="hidden_context">다음</span></i></button>
+              <button type="button" class="prev"><i class="fas fa-chevron-left"><span class="hidden_context">이전</span></i></button>
+            </div>
+            <div class="process_img">
+              <!-- <ul>
+                <li class="process_01">
+                  <p>narration</p>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </div> <!-- // process_area -->
+
       </div> <!-- // project_outer -->
       </section> <!-- // #projectBox -->
 
@@ -142,6 +165,12 @@
       </div> <!-- // contact_outer -->
       </section> <!-- // #contactBox -->
 
+      <div class="top_btn">
+        <a href="#wrap">
+          <i class="fas fa-chevron-up"><span class="hidden_context">top</span></i>
+        </a>
+      </div> <!-- // top_btn -->
+
     </div> <!-- // wrap_outer -->
   </div> <!-- // #wrap -->
  
@@ -153,5 +182,7 @@
   <script src="../js/src/homeBox.js"></script>
   <script src="../js/src/skill.js"></script>
   <script src="../js/src/project_list.js"></script>
+  <script src="../js/src/process.js"></script>
+  <script src="../js/src/top_btn.js"></script>
 </body>
 </html>

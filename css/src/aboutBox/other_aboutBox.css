@@ -1,7 +1,8 @@
 /* other_aboutBox.css */
 
-#aboutBox { width:100%; height:auto; min-height:500px; padding-top:100vh; margin:auto; 
-  margin-top:500px; margin-bottom:100px; } /* #020611 */
+#aboutWrap { width:100%; height:auto; min-height:500px; padding-top:100vh; margin:auto; 
+  margin-top:500px; margin-bottom:100px; }
+#aboutBox { width:100%; height:auto; min-height:500px; } /* #020611 */
 
 .about_outer { position:relative; width:100%; height:auto; min-height:500px;  }
 

@@ -31,7 +31,7 @@
       listEl.find('dt').text(data[i].title);
       listEl.find('dd').text(data[i].text);
       linkA = listEl.find('.pro_btn').find('a');
-      linkA.attr({'href':data[i].alink});
+      linkA.attr({'href':data[i].alink, 'target':'_blank'});
     }
     var projectLi = projectUl.children('li');
 

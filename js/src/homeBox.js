@@ -8,8 +8,10 @@
 
   var homeBox = $('#homeBox');
   var homeBoxHeight = homeBox.outerHeight();
+
+  var aboutWrap = $('#aboutWrap');
   var aboutBox = $('#aboutBox');
-  aboutBox.css({paddingTop:winH*3.5+'px'});
+  aboutWrap.css({paddingTop:winH*3.5+'px'});
   var aboutScroll =aboutBox.offset().top;
   // console.log(aboutScroll);
 
@@ -28,7 +30,7 @@
     var winSt = win.scrollTop();
     var setScroll = winSt /100;
     var per = winSt / winH;
-
+    // console.log(winSt);
     var i =0;
   // 달 나타나면서 올라가기
   
@@ -45,10 +47,15 @@
       opacityR = i + 1 - per;
       homeText.css({'opacity':-opacityR});
     }else{
-      console.log('!!!');
+      // console.log('!!!');
       // homeBoxOp =  MoonFn(setScroll)/50;
       homeBox.css({opacity:homeBoxOp});
-      console.log( homeBoxOp );
+      // console.log( homeBoxOp );
+      if(parseFloat(homeBox.css('opacity')) <= 0){
+        homeBox.hide();
+      }else{
+        homeBox.show();
+      }
     }
 
     // if( 969 < winSt < 1500 ){

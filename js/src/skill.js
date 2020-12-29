@@ -4,11 +4,15 @@
   // jQuery start
    var win = $(window) ;
    var winH = win.outerHeight();
+   var aboutBox = $('#aboutBox');
+
+   var aboutBoxSt = aboutBox.offset().top;
+   console.log(aboutBoxSt);
    
    var canvas = document.querySelector('.paper');
    var ctx = canvas.getContext('2d');
    
-   var baseColor = "#274CA7"; //#5072FF
+   var baseColor = "#508CD2"; //#5072FF #274CA7
    var fontColor = "#fff"
    ctx.lineWidth = 20;
    ctx.lineCap = 'round';
