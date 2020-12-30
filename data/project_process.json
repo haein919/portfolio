@@ -5,66 +5,48 @@
         "projectName":"yankee candle",
         "makeDate":"2020.08 ~ 2020.10",
         "deviceType":"responsive web",
-        "sampleImage":["yankee_sketch.jpg"],
-        "deviceSize":{
-          "mobile":"~480px",
-          "tablet":"481~1024px",
-          "laptop":"1025~1440px",
-          "pc":"1440~"
-        },
+        "sampleImage":"yankee_sketch.jpg",
+        "deviceSize":{ "mobile":"~480px",
+                       "tablet":"481~1024px",
+                       "laptop":"1025~1440px",
+                       "pc":"1440~" },
+
         "gitSite":"https://github.com/haein919/",
         "webPage":"https://haein919.github.io/yankeecandle/",
         "proccess":{
-          "sketch":{
-            "image":"yankee_sketch.jpg",
-            "text":"메인페이지와 서브페이지 스케치 과정"
-          },
-          "prototype":{
-            "image":"yankee_prototype.jpg",
-            "text":"메인페이지와 서브페이지 프로토타입"
-          },
-          "design":{
-            "image":"yankee_design.jpg",
-            "text":"메인페이지와 서브페이지 디자인 작업물"
-          },
-          "coding":{
-            "image":"yankee_coding.jpg",
-            "text":"디자인에 기반한 웹페이지 코딩 과정"
-          }
-        }
+                      "sketch":{ "image":"yankee_sketch.jpg",
+                                 "text":"메인페이지와 서브페이지 스케치 과정" },
+                      "prototype":{ "image":"yankee_prototype.png",
+                                    "text":"메인페이지와 서브페이지 프로토타입" },
+                      "design":{ "image":"yankee_design.jpg",
+                                 "text":"메인페이지와 서브페이지 디자인 작업물" },
+                      "coding":{ "image":"yankee_coding.png",
+                                 "text":"디자인에 기반한 웹페이지 코딩 과정" }
+                    }
       },
 
       {
         "projectName":"elle korea",
         "makeDate":"2020.10 ~ 2020.12",
         "deviceType":"responsive web",
-        "sampleImage":["elle.jpg"],
-        "deviceSize":{
-          "mobile":"~480px",
-          "tablet":"481~1024px",
-          "laptop":"1025~1440px",
-          "pc":"1440~"
-        },
+        "sampleImage":"elle.jpg",
+        "deviceSize":{ "mobile":"~480px",
+                       "tablet":"481~1024px",
+                       "laptop":"1025~1440px",
+                       "pc":"1440~" },
+
         "gitSite":"https://github.com/haein919/",
         "webPage":"https://haein919.github.io/elle/",
         "proccess":{
-          "sketch":{
-            "image":"elle_sketch.jpg",
-            "text":"메인페이지와 서브페이지 스케치 과정"
-          },
-          "prototype":{
-            "image":"elle_prototype.jpg",
-            "text":"메인페이지와 서브페이지 프로토타입"
-          },
-          "design":{
-            "image":"elle_design.jpg",
-            "text":"메인페이지와 서브페이지 디자인 작업물"
-          },
-          "coding":{
-            "image":"elle_coding.jpg",
-            "text":"디자인에 기반한 웹페이지 코딩 과정"
-          }
-        }
+                      "sketch":{ "image":"elle_sketch.jpg",
+                                 "text":"메인페이지와 서브페이지 스케치 과정" },
+                      "prototype":{ "image":"elle_prototype.jpg",
+                                    "text":"메인페이지와 서브페이지 프로토타입" },
+                      "design":{ "image":"elle_design.jpg",
+                                 "text":"메인페이지와 서브페이지 디자인 작업물" },
+                      "coding":{ "image":"elle_coding.jpg",
+                                 "text":"디자인에 기반한 웹페이지 코딩 과정" }
+                    }
       }
     ] 
   } 

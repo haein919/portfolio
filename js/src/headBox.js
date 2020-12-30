@@ -16,7 +16,7 @@
   win.on('scroll', function(e){ // win에 scroll이라는 기능을 수행할 경우 함수 아래 실행 
    var winSt = win.scrollTop(); // winSt는 scroll 했을 시 생기는 값으로 변수로 지정
    if(winSt >= 2900 ){ // 스크롤 값이 45보다 크거나 같으면 아래 기능 수행
-     headBox.css({'position':'fixed', 'top':20+'px', 'z-index':2000, 'width': 90 + '%',
+     headBox.css({'position':'fixed', 'top':0, 'z-index':1200, 'width': 100 + '%',
      'left':0, 'right':0, 'margin':'auto', 'height':80+'px',
      'border-bottom':'1px solid rgba(0,0,0,0.4)', 
      'background-color':'rgba(255,255,255,0.9)' });

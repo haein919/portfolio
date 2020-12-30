@@ -35,3 +35,7 @@
   margin-left:20px; color:#fff; }
 .con_content dd a { display:block; width:100%; height:100%;
   color:#fff; }
+
+.con_content dl:last-of-type dt { border:none; width:auto; height:100%; font-size:0.9rem;
+  font-weight:300; color:#fff; text-transform:capitalize; }
+.con_content dl:last-of-type dd { font-size:0.9rem; }

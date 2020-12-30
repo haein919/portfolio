@@ -49,55 +49,72 @@
 
 .project_area .pro_btn> button { float:left; width:49%; height:30px; 
   color:#fff; font-size:0.9rem;  font-family:'Noto Sans KR';
-  font-weight:600; border:1px solid #fff; }
+  font-weight:400; border:1px solid #fff; }
 
 .project_area .pro_btn> button:hover,
 .project_area .pro_btn > a:hover { background-color:#fff;
-  color:#274CA7; font-weight:bold; } 
+  color:#222;  } 
 
 .project_area .pro_btn > a { display: block;
   float:right; width:49%; height:29px;
-  color:#fff; text-align:center; font-weight:600;
+  color:#fff; text-align:center; font-weight:400;
   font-size:0.9rem; line-height:28px;
   border:1px solid #fff;  } 
 /* --------------------------------------------------------------------------------------------- */
 
-.process_area { display:none;
-  position:fixed; top:0; left:0; width:100%; height:100%; z-index:1500; 
-  background-color:rgba(0,0,0,0.5); }
+.process_area { 
+  display:none; position:fixed; top:0; left:0; 
+  width:100%; height:100%; z-index:1500; 
+  background-color:rgba(0,0,0,0.8); }
   
-  .process_outer { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
-    width:55vw; height:35vw; border-radius:0.5rem; padding:1rem; background-color:#fff; }
-  
-  .close { position:absolute; top:-0.5rem; right:-0.5rem; 
-    z-index:2; width:2rem; height:2rem; }
-  .close > button { width:100%; height:100%; 
-    border-radius:100%; box-sizing:border-box; 
-    border:0.2rem solid #333; 
-    background-color:#fff; }
-  .close > button > i { width:100%; height:100%; font-size:1.2rem;
-    text-align:center; line-height:1.6rem; }
-  
-  .np_btn { position:absolute; top:50%; left:50%; transform:translateX(-50%);
-    z-index:2; width:90%; height:0; }
-    .next { transform:translateY(-50%); float:right; 
-      width:50px; height:50px; text-align:center; }
-    .prev { transform:translateY(-50%); float:left; 
-      width:50px; height:50px; text-align:center; }
+.process_outer { 
+  position:absolute; top:50%; left:50%; 
+  transform:translate(-50%, -50%); width:55vw; height:35vw; 
+  border-radius:0.5rem; padding:1rem; background-color:#fff; }
 
-  .np_btn button i { display:block; width:100%; height:100%; font-size:3rem; }
+.close { position:absolute; top:-2.5rem; right:-2.5rem; z-index:2; width:2rem; height:2rem; }
+
+.close > button { width:100%; height:100%; }
+
+.close > button > i { width:100%; height:100%; font-size:2.5rem; 
+  text-align:center; line-height:1.9rem; color:#fff; 
+  text-shadow:2px 2px 5px rgb(231, 221, 255);
+  transition: all 400ms ease; }
+
+.close > button:hover i { transform:rotate(180deg); }
+
+.np_btn { position:absolute; top:50%; left:50%; 
+  transform:translateX(-50%); z-index:2; width:90%; height:0; }
   
-  .process_img { overflow:hidden; position:relative; width:100%; height:100%;
-    background-repeat:no-repeat; background-position:50% 50%; background-size:cover; }
-  .process_img ul { width:400%; height:100%; }
-  .process_img ul li { float:left;
-    width:25%; height:100%; background-color:#AA8CD2;
-    background-repeat:no-repeat;
-    background-position:50% 50%;
-    background-size:cover; }
+  .next { transform:translateY(-50%); float:right; 
+    width:50px; height:50px; text-align:center; }
+  .prev { transform:translateY(-50%); float:left; 
+    width:50px; height:50px; text-align:center; }
+
+.np_btn button i { display:block; width:100%; height:100%; font-size:3rem; }
+
+.process_img { 
+  overflow:hidden; position:relative; 
+  width:100%; height:100%;
+  background-repeat:no-repeat; 
+  background-position:50% 50%; 
+  background-size:cover; }
+
+.process_img ul { width:400%; height:100%; }
+.process_img ul li { position:relative;
+  float:left; width:25%; height:100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  background-size:contain; }
  
-  .process_img ul li p { position:absolute; left:0; bottom:0; transform:translateY(105%); 
-    z-index:2; width:100%; height:auto; box-sizing:border-box;
-    padding:1rem; background-color:rgba(0,0,0,0.7); color:#fff;
-    border-bottom-right-radius:0.5rem; border-bottom-left-radius:0.5rem; }
-  .process_img ul li p.action { transform:translateY(0); transition:all 300ms ease; }
+.process_img ul li p { 
+  position:absolute; left:0; bottom:0; 
+  transform:translateY(105%); z-index:2; 
+  width:100%; height:auto; box-sizing:border-box;
+  padding:1rem; background-color:rgba(0, 0, 0, 0.9); color:#fff;
+  border-bottom-right-radius:0.5rem; border-bottom-left-radius:0.5rem; }
+
+.process_img ul li p.action { transform:translateY(0); transition:all 300ms ease; }

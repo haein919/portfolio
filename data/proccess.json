@@ -1,0 +1,28 @@
+[
+  { "projectName":"yankee candle",
+    "sample":{ "image":"yankeecandle/yankee_pcin.jpg",
+               "text":"디바이스 환경에 맞게 개발된 모습" },
+    "sketch":{ "image":"yankeecandle/yankee_sketch.jpg",
+               "text":"메인페이지와 서브페이지 스케치 과정" },
+    "prototype":{ "image":"yankeecandle/yankee_prototype.png",
+                  "text":"메인페이지와 서브페이지 프로토타입" },
+    "design":{ "image":"yankeecandle/yankee_design.jpg",
+               "text":"메인페이지와 서브페이지 디자인 작업물" },
+    "coding":{ "image":"yankeecandle/yankee_coding.png",
+               "text":"디자인에 기반한 웹페이지 코딩 과정" } 
+  },
+  
+  { "projectName":"elle korea",
+    "sample":{ "image":"elle/elle_all_device.jpg",
+               "text":"디바이스 환경에 맞게 개발된 모습" },
+    "sketch":{ "image":"elle/elle_sketch.png",
+               "text":"메인페이지와 서브페이지 스케치 과정" },
+    "prototype":{ "image":"elle/elle_prototype.jpg",
+                  "text":"메인페이지와 서브페이지 프로토타입" },
+    "design":{ "image":"elle/elle_design.jpg",
+               "text":"메인페이지와 서브페이지 디자인 작업물" },
+    "coding":{ "image":"elle/elle_coding.jpg",
+               "text":"디자인에 기반한 웹페이지 코딩 과정" } 
+  }
+
+]
