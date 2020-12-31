@@ -8,7 +8,7 @@
 
    var aboutBoxSt = aboutBox.offset().top; // aboutBox가 위에서부터 얼마나 떨어져 있는지에 대한 변수값
   //  console.log(aboutBoxSt); // 3891.5
-   var aboutOffset = aboutBoxSt - winH/5 *4;; // aboutBox가 위에서부터 떨어진 값에서 윈도우 창의 길이를 빼줌
+   var aboutOffset = aboutBoxSt - winH/5 *3; // aboutBox가 위에서부터 떨어진 값에서 윈도우 창의 길이를 빼줌
    var ok = true;
    win.on('scroll', function(e){
      var winSt = win.scrollTop();

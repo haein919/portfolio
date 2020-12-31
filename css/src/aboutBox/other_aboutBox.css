@@ -28,9 +28,11 @@
   .about_context_area { width:60%; height:auto; min-height:200px; margin:auto; margin-bottom:150px; }
   .about_context_text { float:left; width:60%; height:auto; min-height:200px;
     padding-top:10px; box-sizing: border-box; text-align:right; }
-  .about_context_text span { width:auto; height:auto; color:#fff; font-weight:100; }
-  .about_context_img { float:right; width:20%; height:auto; min-height:200px; 
-    background-image:url('../../../img/woman.png');
+  .about_context_text span { width:auto; height:auto; color:#fff; font-weight:100; word-break:keep-all; }
+  .about_context_img { 
+    position: absolute; top: 12%; right: 10%;
+    width:20%; height:auto; min-height:200px; 
+    background-image:url('../../../img/moon_child.png');
     background-repeat:no-repeat;
     background-position:50% 50%;
     background-size:contain; }
