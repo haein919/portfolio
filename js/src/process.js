@@ -39,11 +39,11 @@
       processLi.eq(0).css({backgroundImage:'url('+ imgUrl + data[j].sample.image +')'});
       processLi.eq(0).find('p').text(data[j].sample.text);
       
-      processLi.eq(1).css({backgroundImage:'url('+ imgUrl + data[j].sketch.image +')'});
-      processLi.eq(1).find('p').text(data[j].sketch.text);
+      processLi.eq(1).css({backgroundImage:'url('+ imgUrl + data[j].plan.image +')'});
+      processLi.eq(1).find('p').text(data[j].plan.text);
       
-      processLi.eq(2).css({backgroundImage:'url('+ imgUrl + data[j].prototype.image +')'});
-      processLi.eq(2).find('p').text(data[j].prototype.text);
+      processLi.eq(2).css({backgroundImage:'url('+ imgUrl + data[j].frame.image +')'});
+      processLi.eq(2).find('p').text(data[j].frame.text);
       
       processLi.eq(3).css({backgroundImage:'url('+ imgUrl + data[j].design.image +')'});
       processLi.eq(3).find('p').text(data[j].design.text);
@@ -77,16 +77,63 @@
           narr.addClass('action');
         }, timed/2);
       });
-   // ----------------------------------------------
+ 
+   // ------------------------------------------------
+      var proccessBtn = processArea.find('.np_btn');
+      var N_btn = proccessBtn.children('button').eq(0);
+      var P_btn = proccessBtn.children('button').eq(1);
+
+      var processImgLast = processLi.eq(-1).clone();
+      processUl.prepend(processImgLast);
+      var reProcessLi = processUl.children('li');
+
+      processUl.css({ 'margin-left':-100 + '%', 'width':reProcessLi.length * 100 + '%' });
+      reProcessLi.css({ 'width':(100/reProcessLi.length) + '%' });
+
+      var slideN = 0;
+      var permission = true;
+      N_btn.on('click', function(e){
+        e.preventDefault();
+        if(permission){
+          permission = false;
+          slideN +=1;
+          processUl.stop().animate({'left':slideN * -100 + '%' },function(){
+            if(slideN >= processLi.length-1){
+              slideN = -1;
+              processUl.stop().css({'left':slideN * -100 + '%' });
+            }
+            setTimeout(function(){
+              permission = true;
+            },100);
+          });
+        }
+      }); // N_btn();
+
+      P_btn.on('click', function(e){
+        e.preventDefault();
+        if(permission){
+          permission = false;
+          slideN -=1;
+          processUl.stop().animate({ 'left': slideN * -100 + '%' }, function(){
+            if(slideN <=-1){
+              slideN = processLi.length-1;
+              processUl.stop().css({ 'left': slideN * -100 + '%' });
+            }
+            setTimeout(function(){
+              permission = true;
+            },100);
+          });
+        }
+      }); // P_btn();
+      // ----------------------------------------------
       close.on('click', function(e){
         e.preventDefault();
         processArea.stop().fadeOut();
         projectLi.eq(indexCheck).find('button').focus();
         narr.removeClass('action');
       });
-   // ------------------------------------------------
-    });
 
+    });
 
    }); // $.ajax()
  // jQuery end

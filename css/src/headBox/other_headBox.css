@@ -16,4 +16,5 @@
   .menu_outer ul { width:100%; height:100%; text-align:center; }
   .menu_outer li { display:inline-block; width:22%; height:100%; 
     color:#fff; text-transform:uppercase; }
-  .menu_outer li a { display:block; width:70%; height:auto; line-height:80px; }
+  .menu_outer li a { display:block; width:70%; height:auto; line-height:80px; text-decoration:none; }
+  .menu_outer li a:hover { text-decoration:underline #333; transform:all 300ms linear;}

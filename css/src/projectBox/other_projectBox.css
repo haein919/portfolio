@@ -100,7 +100,7 @@
   background-position:50% 50%; 
   background-size:cover; }
 
-.process_img ul { width:400%; height:100%; }
+.process_img ul { position:relative; width:500%; height:100%; }
 .process_img ul li { position:relative;
   float:left; width:25%; height:100%;
   border: 1px solid #333;
@@ -108,7 +108,9 @@
   border-radius: 10px;
   background-repeat:no-repeat;
   background-position:50% 50%;
-  background-size:contain; }
+  background-size:cover; }
+
+.process_img ul li:nth-of-type(2) { background-size:contain; }
  
 .process_img ul li p { 
   position:absolute; left:0; bottom:0; 
